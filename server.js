@@ -7,6 +7,8 @@ server.on('connection', function (socket) {
 
   socket.on('data', function (data) {
     console.log('empfangene daten vom client:', data.toString())
+
+    socket.write('dies ist die antwort des servers')
   })
 })
 
