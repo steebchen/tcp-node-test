@@ -12,6 +12,10 @@ server.on('connection', function (socket) {
   })
 })
 
-server.listen({ host: '127.0.0.1', port: 8000 }, function () {
-  console.log('warte auf verbindungen auf port', server.address())
+server.listen({
+  host: '127.0.0.1',
+  port: 8000
+}, function () {
+  var port = server.address().port
+  console.log('warte auf verbindungen auf port', port)
 })
